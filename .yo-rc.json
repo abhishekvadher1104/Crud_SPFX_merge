@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "nodeVersion": "18.20.8",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "map-integration",
+    "libraryId": "c9c1c3d1-0266-4215-bb2d-55d8e53d11a0",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "map-integration",
+    "solutionShortDescription": "map-integration description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

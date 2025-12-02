@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "map-integration-client-side-solution",
+    "id": "c9c1c3d1-0266-4215-bb2d-55d8e53d11a0",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "map-integration description"
+      },
+      "longDescription": {
+        "default": "map-integration description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+
+    "features": [
+      {
+        "title": "map-integration Feature",
+        "description": "The feature that activates elements of the map-integration solution.",
+        "id": "b256fe73-c71b-4cdd-97e8-b4e8929a71bd",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+
+  "paths": {
+    "zippedPackage": "solution/map-integration.sppkg"
+  }
+}
