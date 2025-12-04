@@ -17,11 +17,20 @@
           "manifest": "./src/webparts/crud/CrudWebPart.manifest.json"
         }
       ]
+    },
+    "anonymus-apiwp-demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/anonymusApiwpDemo/AnonymusApiwpDemoWebPart.js",
+          "manifest": "./src/webparts/anonymusApiwpDemo/AnonymusApiwpDemoWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "MapIntegrationWebPartStrings": "lib/webparts/mapIntegration/loc/{locale}.js",
-    "CrudWebPartStrings": "lib/webparts/crud/loc/{locale}.js"
+    "CrudWebPartStrings": "lib/webparts/crud/loc/{locale}.js",
+    "AnonymusApiwpDemoWebPartStrings": "lib/webparts/anonymusApiwpDemo/loc/{locale}.js"
   }
 }
