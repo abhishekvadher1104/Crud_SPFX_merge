@@ -57,6 +57,14 @@
           "manifest": "./src/webparts/abhishekWeb/AbhishekWebWebPart.manifest.json"
         }
       ]
+    },
+    "abhi-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/abhi/AbhiWebPart.js",
+          "manifest": "./src/webparts/abhi/AbhiWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -66,6 +74,7 @@
     "AnonymusApiwpDemoWebPartStrings": "lib/webparts/anonymusApiwpDemo/loc/{locale}.js",
     "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
     "MywebWebPartStrings": "lib/webparts/myweb/loc/{locale}.js",
-    "AbhishekWebWebPartStrings": "lib/webparts/abhishekWeb/loc/{locale}.js"
+    "AbhishekWebWebPartStrings": "lib/webparts/abhishekWeb/loc/{locale}.js",
+    "AbhiWebPartStrings": "lib/webparts/abhi/loc/{locale}.js"
   }
 }
