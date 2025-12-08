@@ -65,6 +65,14 @@
           "manifest": "./src/webparts/abhi/AbhiWebPart.manifest.json"
         }
       ]
+    },
+    "flight-status-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/flightStatus/FlightStatusWebPart.js",
+          "manifest": "./src/webparts/flightStatus/FlightStatusWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -75,6 +83,7 @@
     "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
     "MywebWebPartStrings": "lib/webparts/myweb/loc/{locale}.js",
     "AbhishekWebWebPartStrings": "lib/webparts/abhishekWeb/loc/{locale}.js",
-    "AbhiWebPartStrings": "lib/webparts/abhi/loc/{locale}.js"
+    "AbhiWebPartStrings": "lib/webparts/abhi/loc/{locale}.js",
+    "FlightStatusWebPartStrings": "lib/webparts/flightStatus/loc/{locale}.js"
   }
 }
