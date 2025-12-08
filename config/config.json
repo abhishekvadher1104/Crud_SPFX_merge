@@ -49,6 +49,14 @@
           "manifest": "./src/webparts/myweb/MywebWebPart.manifest.json"
         }
       ]
+    },
+    "abhishek-web-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/abhishekWeb/AbhishekWebWebPart.js",
+          "manifest": "./src/webparts/abhishekWeb/AbhishekWebWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -57,6 +65,7 @@
     "CrudWebPartStrings": "lib/webparts/crud/loc/{locale}.js",
     "AnonymusApiwpDemoWebPartStrings": "lib/webparts/anonymusApiwpDemo/loc/{locale}.js",
     "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
-    "MywebWebPartStrings": "lib/webparts/myweb/loc/{locale}.js"
+    "MywebWebPartStrings": "lib/webparts/myweb/loc/{locale}.js",
+    "AbhishekWebWebPartStrings": "lib/webparts/abhishekWeb/loc/{locale}.js"
   }
 }

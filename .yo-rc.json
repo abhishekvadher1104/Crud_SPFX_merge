@@ -2,7 +2,7 @@
   "@microsoft/generator-sharepoint": {
     "plusBeta": false,
     "isCreatingSolution": false,
-    "nodeVersion": "18.19.1",
+    "nodeVersion": "18.20.8",
     "sdksVersions": {},
     "version": "1.21.1",
     "libraryName": "map-integration",
