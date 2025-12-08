@@ -25,12 +25,21 @@
           "manifest": "./src/webparts/anonymusApiwpDemo/AnonymusApiwpDemoWebPart.manifest.json"
         }
       ]
+    },
+    "hello-world-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
+          "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "MapIntegrationWebPartStrings": "lib/webparts/mapIntegration/loc/{locale}.js",
     "CrudWebPartStrings": "lib/webparts/crud/loc/{locale}.js",
-    "AnonymusApiwpDemoWebPartStrings": "lib/webparts/anonymusApiwpDemo/loc/{locale}.js"
+    "AnonymusApiwpDemoWebPartStrings": "lib/webparts/anonymusApiwpDemo/loc/{locale}.js",
+    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
   }
 }
