@@ -16,6 +16,15 @@ export default class AnonymusApiwpDemo extends React.Component<IAnonymusApiwpDem
        <div className={styles.anonymusApiwpDemo}>
      <span className={styles.welcome}>User Details:</span>
 
+  <div><strong>Developer Name:</strong> Hirva</div><br />
+
+  
+  <div><strong>Description:</strong> 
+    React & SharePoint Developer Intern with experience in SPFx, Power Automate, and SharePoint customization.
+  </div><br />
+
+  <div><strong>Developer Email:</strong> hirva@example.com</div><br />
+
       <div><strong>ID:</strong>{this.props.id}</div><br />
       <div><strong>User Name:</strong>{this.props.username}</div><br />
       <div><strong>Name:</strong>{this.props.name}</div><br />
