@@ -1,0 +1,466 @@
+/* ---------------------------------------------- */
+
+/*  MAIN CALENDAR WRAPPER                         */
+
+/* ---------------------------------------------- */
+
+.calendarWrapper {
+
+  background: #ffffff;
+
+  padding: 22px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+  font-family: "Segoe UI", sans-serif;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+}
+ 
+/* ---------------------------------------------- */
+
+/*  HEADER (Month + Year + Navigation)            */
+
+/* ---------------------------------------------- */
+
+.header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+ 
+  h2 {
+
+    margin: 0;
+
+    font-weight: 600;
+
+    font-size: 22px;
+
+    color: #333;
+
+  }
+
+}
+ 
+.navBtn {
+
+  background: #eef1f5;
+
+  border: none;
+
+  padding: 6px 14px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  font-size: 18px;
+
+}
+ 
+.navBtn:hover {
+
+  background: #d9dfe7;
+
+}
+ 
+/* ---------------------------------------------- */
+
+/*  LEGEND (Birthday / Anniversary / Booking)     */
+
+/* ---------------------------------------------- */
+
+.legend {
+
+  display: flex;
+
+  gap: 24px;
+
+  margin-bottom: 14px;
+ 
+  span {
+
+    display: flex;
+
+    align-items: center;
+
+    font-size: 14px;
+
+    color: #444;
+
+  }
+
+}
+ 
+.dot {
+
+  width: 14px;
+
+  height: 14px;
+
+  border-radius: 50%;
+
+  margin-right: 6px;
+
+}
+ 
+/* ---------------------------------------------- */
+
+/*  WEEK ROW (SUN - SAT)                          */
+
+/* ---------------------------------------------- */
+
+.weekRow {
+
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  margin-bottom: 6px;
+
+  gap: 6px;
+
+}
+ 
+.weekDay {
+
+  text-align: center;
+
+  padding: 6px 0;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #555;
+
+  background: #f3f6fa;
+
+  border-radius: 6px;
+
+}
+ 
+/* ---------------------------------------------- */
+
+/*  CALENDAR GRID                                 */
+
+/* ---------------------------------------------- */
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 6px;
+
+  position: relative;
+
+}
+ 
+.emptyCell {
+
+  min-height: 90px;
+
+  background: transparent;
+
+}
+ 
+/* Single Calendar Day Cell */
+
+.dayCell {
+
+  background: #fafafa;
+
+  border-radius: 12px;
+
+  min-height: 90px;
+
+  border: 1px solid #eee;
+
+  padding: 8px;
+
+  position: relative;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+
+}
+ 
+.dayCell:hover {
+
+  background: #f0f4ff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+
+}
+ 
+/* Day number (top-right corner) */
+
+.dayNumber {
+
+  position: absolute;
+
+  top: 6px;
+
+  right: 8px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #444;
+
+}
+ 
+/* overlay area for event bars (absolute positioned blocks) */
+
+.overlay {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 280px; /* enough space for 4 rows of events — adjust if needed */
+
+  margin-top: -280px; /* stack overlay on top of grid */
+
+  pointer-events: none;
+
+}
+ 
+/* Event block shown on overlay */
+
+.eventBlock {
+
+  position: absolute;
+
+  padding: 6px 8px;
+
+  border-radius: 8px;
+
+  color: #111;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+
+  pointer-events: auto;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+}
+ 
+.eventTitle {
+
+  font-weight: 600;
+
+  font-size: 13px;
+
+}
+ 
+.eventTime {
+
+  font-size: 11px;
+
+  opacity: 0.85;
+
+}
+ 
+/* ---------------------------------------------- */
+
+/*  POPUP (Event Details)                         */
+
+/* ---------------------------------------------- */
+
+.popup {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  animation: fadeIn 0.25s ease;
+
+  z-index: 999;
+
+}
+ 
+.popupContent {
+
+  background: #ffffff;
+
+  padding: 20px 26px;
+
+  border-radius: 14px;
+
+  width: 340px;
+
+  animation: scaleIn 0.25s ease;
+
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+
+}
+ 
+.popupContent h3 {
+
+  margin: 0 0 8px 0;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+}
+ 
+.popupContent p {
+
+  margin: 6px 0;
+
+  font-size: 14px;
+
+  color: #444;
+
+}
+ 
+.popupContent button {
+
+  margin-top: 14px;
+
+  padding: 8px 16px;
+
+  border: none;
+
+  background: #4a6cf7;
+
+  color: white;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+}
+ 
+.popupContent button:hover {
+
+  background: #3c5be6;
+}
+ 
+
+.calendarWrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.navBtn {
+  background: #f3f3f3;
+  border: 1px solid #d0d0d0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navBtn:hover {
+  background: #e6e6e6;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0 20px 0;
+  font-size: 14px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.weekRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.weekDay {
+  padding: 6px 0;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* ---------------------------------------------- */
+
+/*  Animations                                     */
+
+/* ---------------------------------------------- */
+
+@keyframes fadeIn {
+
+  from { opacity: 0; }
+
+  to { opacity: 1; }
+
+}
+ 
+@keyframes scaleIn {
+
+  from { transform: scale(0.88); opacity: 0; }
+
+  to { transform: scale(1); opacity: 1; }
+
+}
+
+ 

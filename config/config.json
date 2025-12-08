@@ -18,6 +18,14 @@
         }
       ]
     },
+    "my-calender-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/myCalendar/MyCalendarWebPart.js",
+          "manifest": "./src/webparts/myCalendar/MyCalendarWebPart.manifest.json"
+        }
+      ]
+    },
     "anonymus-apiwp-demo-web-part": {
       "components": [
         {
@@ -33,6 +41,14 @@
           "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
         }
       ]
+    },
+    "myweb-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/myweb/MywebWebPart.js",
+          "manifest": "./src/webparts/myweb/MywebWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -40,6 +56,7 @@
     "MapIntegrationWebPartStrings": "lib/webparts/mapIntegration/loc/{locale}.js",
     "CrudWebPartStrings": "lib/webparts/crud/loc/{locale}.js",
     "AnonymusApiwpDemoWebPartStrings": "lib/webparts/anonymusApiwpDemo/loc/{locale}.js",
-    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
+    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
+    "MywebWebPartStrings": "lib/webparts/myweb/loc/{locale}.js"
   }
 }

@@ -1,0 +1,143 @@
+.calendarWrap {
+  font-family: "Segoe UI", system-ui;
+  border: 1px solid #e6e6e6;
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.monthTitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.weekDays {
+  display: flex;
+  gap: 0;
+}
+
+.weekDayCell {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  padding: 4px 0;
+  color: #666;
+}
+
+.gridWrap {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 120px;
+}
+
+.cell {
+  border: 1px solid #f1f1f1;
+  position: relative;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.outside {
+  background: #fafafa;
+  color: #aaa;
+}
+
+.dayNumber {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 12px;
+  color: #666;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none; /* events container is non-blocking; individual event blocks have pointer-events */
+}
+
+.eventBlock {
+  position: absolute;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: #000;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  pointer-events: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.eventTitle {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.eventTime {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  align-items: center;
+}
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.legendBox {
+  width: 16px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* controls */
+.button {
+  display: flex;
+  gap: 10px;
+}
+
+.navBtn {
+  padding: 5px 12px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid #ccc;
+}
+
+.navBtn:hover {
+  background: #e5e5e5;
+}
